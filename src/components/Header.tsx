@@ -2,6 +2,7 @@ import {
   Iconhamb,
   StyledHeader,
   Menu,
+  Background,
 } from "../styled-components/Header.Styled";
 
 interface Hooks {
@@ -18,7 +19,8 @@ export default function Header({ setMenu, menu }: Hooks) {
           alt="hamburger"
           onClick={() => setMenu(!menu)}
         />
-        {menu ? <Menu></Menu> : null}
+        <Background menu={menu} />
+        {menu ? <Menu menu={menu}></Menu> : null}
       </StyledHeader>
     </>
   );

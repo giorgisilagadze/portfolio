@@ -43,7 +43,7 @@ export default function Home({ menu, setMenu }: Hooks) {
       </div>
       <IconsDiv>
         {icons.map((item) => (
-          <CircleDiv>
+          <CircleDiv key={Math.random()}>
             <Icon src={item.src} />
           </CircleDiv>
         ))}
