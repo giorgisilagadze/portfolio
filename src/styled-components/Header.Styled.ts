@@ -5,11 +5,13 @@ interface Styles {
   menu?: boolean;
   opa?: string;
   display?: string;
+  just?: string;
 }
 
-export const StyledHeader = styled.div`
+export const StyledHeader = styled.div<Styles>`
   display: flex;
-  justify-content: flex-end;
+  justify-content: ${({ just }) => just};
+  align-items: center;
 `;
 
 export const Iconhamb = styled.img`
@@ -53,6 +55,7 @@ export const Background = styled.div<Styles>`
   height: 100%;
   background-color: black;
   opacity: ${({ menu }) => (menu ? 0.9 : 0)};
+  display: ${({ menu }) => (menu ? "block" : "none")};
   transition: opacity 1s ease;
   z-index: 100;
 `;
@@ -75,4 +78,23 @@ export const PageName = styled.p<Styles>`
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
+`;
+
+export const HeaderName = styled.h1`
+  @keyframes top {
+    0% {
+      margin-top: 300px;
+    }
+
+    100% {
+      margin-top: 0px;
+    }
+  }
+
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+  color: white;
+  margin-top: 0px;
+  animation: top 0.5s;
 `;

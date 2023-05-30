@@ -6,6 +6,7 @@ import {
   Background,
   PageName,
   StyledLink,
+  HeaderName,
 } from "../styled-components/Header.Styled";
 import { useLocation } from "react-router-dom";
 
@@ -46,7 +47,12 @@ export default function Header({ setMenu, menu }: Hooks) {
 
   return (
     <>
-      <StyledHeader>
+      <StyledHeader
+        just={location.pathname != "/" ? "space-between" : "flex-end"}
+      >
+        {location.pathname != "/" ? (
+          <HeaderName>Giorgi Silagadze</HeaderName>
+        ) : null}
         <Iconhamb
           src={menu ? "./images/icon-close.svg" : "./images/icon-hamburger.svg"}
           alt="hamburger"
