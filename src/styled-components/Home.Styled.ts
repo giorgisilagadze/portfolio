@@ -1,10 +1,23 @@
 import styled from "styled-components";
 
 interface Styles {
-  gap: string;
+  gap?: string;
+  z?: string;
+  width?: string;
+  height?: string;
 }
 
 export const StyledHome = styled.div<Styles>`
+  @keyframes home {
+    0% {
+      margin-top: -300px;
+    }
+
+    100% {
+      margin-top: 0px;
+    }
+  }
+
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -12,14 +25,27 @@ export const StyledHome = styled.div<Styles>`
   flex-direction: column;
   gap: ${({ gap }) => gap};
   transition: 0.5s;
+  margin-top: 0px;
+  animation: home 0.5s;
 `;
 
 export const Name = styled.h1`
+  @keyframes font-size {
+    0% {
+      font-size: 20px;
+    }
+
+    100% {
+      font-size: 30px;
+    }
+  }
+
   font-weight: 700;
   font-size: 30px;
   line-height: 22px;
   color: white;
   text-align: center;
+  animation: font-size 1s;
 `;
 
 export const Hometxt = styled.p`
@@ -45,11 +71,13 @@ export const IconsDiv = styled.div`
   gap: 16px;
 `;
 
-export const CircleDiv = styled.div`
+export const CircleDiv = styled.div<Styles>`
   width: 40px;
   height: 40px;
   border: none;
   position: relative;
+  border-radius: 50%;
+  z-index: ${({ z }) => z};
 
   &::before {
     content: "";
@@ -59,6 +87,12 @@ export const CircleDiv = styled.div`
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 50%;
     opacity: 0.1;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: #18d26e;
+    transition: 0.5s;
   }
 `;
 
@@ -72,7 +106,3 @@ export const Icon = styled.img`
   left: 12.5px;
   z-index: 99;
 `;
-
-// export const Container = styled.div`
-
-// `

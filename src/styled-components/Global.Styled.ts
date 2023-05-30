@@ -14,6 +14,8 @@ export const GlobalStyled = createGlobalStyle`
         background-size: 100vw 100vh;
         padding: 24px;
         background-color: black;
+        overflow: hidden;
+
     }
 
 `;

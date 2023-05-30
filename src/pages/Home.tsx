@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   StyledHome,
   Name,
@@ -8,6 +7,7 @@ import {
   Icon,
   CircleDiv,
 } from "../styled-components/Home.Styled";
+import { Link } from "react-router-dom";
 
 interface Icons {
   src: string;
@@ -24,6 +24,14 @@ const icons: arrOfIcons = [
   {
     src: "./images/instagram.svg",
     link: "https://www.instagram.com/silagadze_giorgi/",
+  },
+  {
+    src: "./images/linkedin.svg",
+    link: "https://www.linkedin.com/in/giorgi-silagadze-3bb522257/",
+  },
+  {
+    src: "./images/github.svg",
+    link: "https://github.com/giorgisilagadze",
   },
 ];
 
@@ -42,10 +50,12 @@ export default function Home({ menu, setMenu }: Hooks) {
         </Hometxt>
       </div>
       <IconsDiv>
-        {icons.map((item) => (
-          <CircleDiv key={Math.random()}>
-            <Icon src={item.src} />
-          </CircleDiv>
+        {icons.map((item, index) => (
+          <Link to={item.link} key={Math.random()} target="_blank">
+            <CircleDiv z={menu ? "99" : "101"}>
+              <Icon src={item.src} />
+            </CircleDiv>
+          </Link>
         ))}
       </IconsDiv>
     </StyledHome>

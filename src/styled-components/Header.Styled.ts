@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 interface Styles {
-  menu: boolean;
+  menu?: boolean;
+  opa?: string;
+  display?: string;
 }
 
 export const StyledHeader = styled.div`
@@ -14,25 +17,32 @@ export const Iconhamb = styled.img`
     brightness(504%) contrast(100%);
   width: 20px;
   height: 20px;
-  z-index: 102;
+  z-index: 103;
 `;
 
 export const Menu = styled.div<Styles>`
+  @keyframes menu {
+    0% {
+      top: 80px;
+    }
+    100% {
+      top: 64px;
+    }
+  }
   position: fixed;
   min-width: 327px;
   max-width: 768px;
-  height: 100%;
-  border: 2px solid grey;
-  top: ${({ menu }) => (menu ? "64px" : "0px")};
+  height: 700px;
+  border: 2px solid #343535;
+  top: 64px;
   left: 24px;
   right: 24px;
-  bottom: 40px;
   margin-left: auto;
   margin-right: auto;
-  z-index: 101;
-  transition: top 0.3s ease;
-  transition-delay: 0.3s;
-  padding: 24px;
+  margin-bottom: 40px;
+  z-index: 102;
+  animation: menu 0.5s;
+  padding: 4px 24px 24px;
 `;
 
 export const Background = styled.div<Styles>`
@@ -45,4 +55,24 @@ export const Background = styled.div<Styles>`
   opacity: ${({ menu }) => (menu ? 0.9 : 0)};
   transition: opacity 1s ease;
   z-index: 100;
+`;
+
+export const PageName = styled.p<Styles>`
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+  margin-top: 20px;
+  opacity: ${({ opa }) => opa};
+
+  &::after {
+    content: "";
+    display: ${({ display }) => display};
+    width: 20px;
+    border-bottom: 2px solid #18d26e;
+  }
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
 `;
