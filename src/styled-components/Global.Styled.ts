@@ -12,9 +12,8 @@ export const GlobalStyled = createGlobalStyle`
         height: 100vh;
         background: url("./images/kyrie.jpeg") no-repeat ;
         background-size: 100vw 100vh;
-        padding: 24px;
+        /* padding: 0px 24px; */
         background-color: black;
-        overflow: hidden;
 
     }
 

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Iconhamb,
   StyledHeader,
@@ -49,6 +48,7 @@ export default function Header({ setMenu, menu }: Hooks) {
     <>
       <StyledHeader
         just={location.pathname != "/" ? "space-between" : "flex-end"}
+        bg={location.pathname != "/" ? "black" : ""}
       >
         {location.pathname != "/" ? (
           <HeaderName>Giorgi Silagadze</HeaderName>

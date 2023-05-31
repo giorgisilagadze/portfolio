@@ -18,7 +18,7 @@ export const StyledHome = styled.div<Styles>`
     }
   }
 
-  height: 100vh;
+  height: calc(100vh - 44px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,6 +27,7 @@ export const StyledHome = styled.div<Styles>`
   transition: 0.5s;
   margin-top: 0px;
   animation: home 0.5s;
+  overflow: hidden;
 `;
 
 export const Name = styled.h1`

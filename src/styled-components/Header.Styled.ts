@@ -6,12 +6,15 @@ interface Styles {
   opa?: string;
   display?: string;
   just?: string;
+  bg?: string;
 }
 
 export const StyledHeader = styled.div<Styles>`
   display: flex;
   justify-content: ${({ just }) => just};
   align-items: center;
+  background-color: ${({ bg }) => bg};
+  padding: 16px 24px;
 `;
 
 export const Iconhamb = styled.img`
