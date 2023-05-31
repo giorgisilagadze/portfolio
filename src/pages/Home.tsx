@@ -40,7 +40,7 @@ interface Hooks {
   setMenu: (menu: boolean) => void;
 }
 
-export default function Home({ menu, setMenu }: Hooks) {
+export default function Home({ menu }: Hooks) {
   return (
     <StyledHome gap={menu ? "20px" : "50px"}>
       <div>
