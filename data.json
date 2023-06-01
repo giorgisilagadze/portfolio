@@ -70,5 +70,11 @@
             "src": "./images/skills/api.png",
             "skill": "Rest API"
         }
+    ],
+    "projects": [
+        {
+            "title": "all",
+            "screens": ["./images/works/space.png", "./images/works/dictionary.png", "./images/works/Todo.png", "./images/works/sign-up-form.png", "./images/works/calculator.png", "./images/works/tic-tac-toe.png"]
+        }
     ]
 }

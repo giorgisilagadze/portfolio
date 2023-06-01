@@ -30,7 +30,7 @@ export const StyledAbout = styled.div`
     width: 120px;
     height: 1px;
     border: none;
-    background-color: #4ceb95;
+    background-color: #18d26e;
   }
 `;
 
