@@ -6,6 +6,7 @@ import {
   PageName,
   StyledLink,
   HeaderName,
+  FixedHeader,
 } from "../styled-components/Header.Styled";
 import { useLocation } from "react-router-dom";
 
@@ -46,40 +47,44 @@ export default function Header({ setMenu, menu }: Hooks) {
 
   return (
     <>
-      <StyledHeader
-        just={location.pathname != "/" ? "space-between" : "flex-end"}
-        bg={location.pathname != "/" ? "black" : ""}
-      >
-        {location.pathname != "/" ? (
-          <HeaderName>Giorgi Silagadze</HeaderName>
-        ) : null}
-        <Iconhamb
-          src={menu ? "./images/icon-close.svg" : "./images/icon-hamburger.svg"}
-          alt="hamburger"
-          onClick={() => setMenu(!menu)}
-        />
-        <Background menu={menu} />
-        {menu ? (
-          <Menu menu={menu}>
-            {pages.map((item) => (
-              <StyledLink
-                to={item.link}
-                onClick={() => {
-                  setMenu(!menu);
-                }}
-                key={Math.random()}
-              >
-                <PageName
-                  opa={location.pathname == item.link ? "1" : "0.7"}
-                  display={location.pathname == item.link ? "block" : "none"}
+      <FixedHeader>
+        <StyledHeader
+          just={location.pathname != "/" ? "space-between" : "flex-end"}
+          bg={location.pathname != "/" ? "rgba(0, 0, 0, 0.7)" : ""}
+        >
+          {location.pathname != "/" ? (
+            <HeaderName>Giorgi Silagadze</HeaderName>
+          ) : null}
+          <Iconhamb
+            src={
+              menu ? "./images/icon-close.svg" : "./images/icon-hamburger.svg"
+            }
+            alt="hamburger"
+            onClick={() => setMenu(!menu)}
+          />
+          <Background menu={menu} />
+          {menu ? (
+            <Menu menu={menu}>
+              {pages.map((item) => (
+                <StyledLink
+                  to={item.link}
+                  onClick={() => {
+                    setMenu(!menu);
+                  }}
+                  key={Math.random()}
                 >
-                  {item.name}
-                </PageName>
-              </StyledLink>
-            ))}
-          </Menu>
-        ) : null}
-      </StyledHeader>
+                  <PageName
+                    opa={location.pathname == item.link ? "1" : "0.7"}
+                    display={location.pathname == item.link ? "block" : "none"}
+                  >
+                    {item.name}
+                  </PageName>
+                </StyledLink>
+              ))}
+            </Menu>
+          ) : null}
+        </StyledHeader>
+      </FixedHeader>
     </>
   );
 }

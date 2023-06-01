@@ -18,19 +18,19 @@ type arrOfIcons = Icons[];
 
 const icons: arrOfIcons = [
   {
-    src: "./images/facebook.svg",
+    src: "./images/links/facebook.svg",
     link: "https://www.facebook.com/gio.silagadze.547",
   },
   {
-    src: "./images/instagram.svg",
+    src: "./images/links/instagram.svg",
     link: "https://www.instagram.com/silagadze_giorgi/",
   },
   {
-    src: "./images/linkedin.svg",
+    src: "./images/links/linkedin.svg",
     link: "https://www.linkedin.com/in/giorgi-silagadze-3bb522257/",
   },
   {
-    src: "./images/github.svg",
+    src: "./images/links/github.svg",
     link: "https://github.com/giorgisilagadze",
   },
 ];

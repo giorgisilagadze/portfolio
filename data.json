@@ -5,10 +5,6 @@
             "second": "2 Nov 2002"
         },
         {
-            "first": "Website:", 
-            "second": "www"
-        },
-        {
             "first": "Phone:", 
             "second": "+995 591 44 87 87"
         },
@@ -33,5 +29,46 @@
             "second": "Available"
         }
 
+    ],
+    "about-text": {
+        "sum": "I'm an enthusiastic and detail-oriented frontend developer with a passion for staying up-to-date with emerging technologies. I have a strong ability to problem-solve and integrate complex design elements into user-friendly web applications. With a self-motivated attitude, I aim to deliver high-quality results and continuously expand my skillset."
+    },
+    "skills": [
+        {
+            "src": "./images/skills/html5.png",
+            "skill": "HTML5"
+        },
+        {
+            "src": "./images/skills/css3.png",
+            "skill": "CSS3"
+        },
+        {
+            "src": "./images/skills/tailwind.png",
+            "skill": "Tailwind"
+        },
+        {
+            "src": "./images/skills/styled-components.png",
+            "skill": "Styled-Components"
+        },
+        {
+            "src": "./images/skills/js.png",
+            "skill": "JavaScript"
+        },
+        {
+            "src": "./images/skills/typescript.png",
+            "skill": "TypeScript"
+        },
+        {
+            "src": "./images/skills/react.png",
+            "skill": "React.js"
+        },
+        {
+            "src": "./images/skills/git.png",
+            "skill": "Git"
+        },
+        {
+            "src": "./images/skills/api.png",
+            "skill": "Rest API"
+        }
     ]
 }

@@ -9,7 +9,13 @@ interface Styles {
   bg?: string;
 }
 
-export const StyledHeader = styled.div<Styles>`
+export const FixedHeader = styled.header`
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+`;
+
+export const StyledHeader = styled.header<Styles>`
   display: flex;
   justify-content: ${({ just }) => just};
   align-items: center;

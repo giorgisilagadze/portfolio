@@ -9,9 +9,9 @@ export const GlobalStyled = createGlobalStyle`
     }
 
     body {
-        height: 100vh;
+        min-height: 100vh;
         background: url("./images/kyrie.jpeg") no-repeat ;
-        background-size: 100vw 100vh;
+        background-size: 100vw 100%;
         /* padding: 0px 24px; */
         background-color: black;
 

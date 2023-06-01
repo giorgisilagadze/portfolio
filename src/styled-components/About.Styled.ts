@@ -1,26 +1,30 @@
 import styled from "styled-components";
 
+export const ParentAbout = styled.div`
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+`;
+
 export const StyledAbout = styled.div`
   @keyframes top-about {
     0% {
-      margin-top: 60px;
+      margin-top: 164px;
       opacity: 0;
     }
 
     100% {
-      margin-top: 30px;
+      margin-top: 94px;
       opacity: 0.8;
     }
   }
 
   width: 100%;
   max-width: 540px;
-  height: 700px;
   background-color: rgba(0, 0, 0, 0.9);
-  margin: 30px auto 0px;
+  margin: 94px auto 40px;
   animation: top-about 0.5s ease-in;
-  padding: 24px 30px;
-  overflow: auto;
+  padding: 24px 30px 60px;
 
   hr {
     width: 120px;
@@ -100,4 +104,78 @@ export const AbTitle = styled.p`
 
 export const AbAnsw = styled(AbTitle)`
   font-weight: 400;
+`;
+
+export const AbTxt = styled(AbAnsw)`
+  margin-top: 20px;
+`;
+
+export const SkillsParent = styled.div`
+  @keyframes skill-top {
+    0% {
+      margin-top: 200px;
+      opacity: 0.1;
+    }
+
+    100% {
+      margin-top: 60px;
+      opacity: 1;
+    }
+  }
+
+  &.animate-skills {
+    animation: skill-top 2.5s;
+  }
+`;
+
+export const SkillsDiv = styled.div`
+  margin-top: 60px;
+  width: 100%;
+`;
+
+export const SingleSkillDiv = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-top: 20px;
+  border-radius: 5px;
+`;
+
+export const SkillIcon = styled.img`
+  width: 35px;
+  height: 35px;
+`;
+
+export const CVButt = styled.button`
+  width: 170px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #18d26e;
+  margin: 40px auto 0px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+`;
+
+export const CV = styled.a`
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+`;
+
+export const Download = styled.img`
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(351deg)
+    brightness(400%) contrast(104%);
+  margin-top: -6px;
 `;
