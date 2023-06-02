@@ -52,7 +52,7 @@ export default function Home({ menu }: Hooks) {
       <IconsDiv>
         {icons.map((item) => (
           <Link to={item.link} key={Math.random()} target="_blank">
-            <CircleDiv z={menu ? "99" : "101"}>
+            <CircleDiv z={menu ? "98" : "101"}>
               <Icon src={item.src} />
             </CircleDiv>
           </Link>

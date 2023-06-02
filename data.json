@@ -76,5 +76,27 @@
             "title": "all",
             "screens": ["./images/works/space.png", "./images/works/dictionary.png", "./images/works/Todo.png", "./images/works/sign-up-form.png", "./images/works/calculator.png", "./images/works/tic-tac-toe.png"]
         }
+    ],
+    "contact": [
+        {
+            "icon" : "./images/share.svg",
+            "title": "Social Profiles",
+            "info" : ["./images/links/facebook.svg", "./images/links/instagram.svg", "./images/links/linkedin.svg", "./images/links/github.svg"],
+            "link" : ["https://www.facebook.com/gio.silagadze.547", "https://www.instagram.com/silagadze_giorgi/", "https://www.linkedin.com/in/giorgi-silagadze-3bb522257/", "https://github.com/giorgisilagadze"]
+
+        },
+        {
+            "icon" : "./images/email.png",
+            "title": "Email Me",
+            "info" : ["silagadze.gio123@gmail.com"],
+            "link" : [""]
+        },
+        {
+            "icon" : "./images/phone.png",
+            "title": "Call Me",
+            "info" : ["+995 591 44 87 87"],
+            "link" : [""]
+        }
+
     ]
 }
