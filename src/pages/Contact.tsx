@@ -7,17 +7,56 @@ import {
 } from "../styled-components/About.Styled";
 import {
   IconCont,
-  ContactDIv,
+  ContactDiv,
   IconDiv,
   TitleCont,
   InfoCont,
   IconLinks,
   LinksDiv,
   StyledInput,
+  InputsDiv,
+  Textar,
+  ContactButt,
+  ResultDiv,
+  ResultP,
 } from "../styled-components/Contact.Styled";
 import data from "../../data.json";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import { useState } from "react";
+
+const schema = yup
+  .object({
+    name: yup.string().required(),
+    email: yup
+      .string()
+      .required()
+      .matches(/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,}$/),
+    subject: yup.string().required(),
+    message: yup.string().required(),
+  })
+  .required();
+
+type FormData = yup.InferType<typeof schema>;
 
 export default function Contact() {
+  const [sentMessage, setSentMessage] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>({
+    resolver: yupResolver(schema),
+  });
+  const onSubmit = (data: FormData) => {
+    if (Object.keys(errors).length === 0) {
+      setSentMessage(true);
+      console.log(data);
+    }
+  };
+
   return (
     <ParentAbout>
       <StyledAbout>
@@ -27,7 +66,7 @@ export default function Contact() {
         </TitleDiv>
         <Learn>CONTACT ME</Learn>
         {data.contact.map((item, index) => (
-          <ContactDIv key={Math.random()}>
+          <ContactDiv key={Math.random()}>
             <IconDiv>
               <IconCont src={item.icon} />
             </IconDiv>
@@ -45,11 +84,26 @@ export default function Contact() {
                 )}
               </LinksDiv>
             </div>
-          </ContactDIv>
+          </ContactDiv>
         ))}
-        <ContactDIv>
-          <StyledInput />
-        </ContactDIv>
+        {sentMessage ? (
+          <ResultDiv>
+            <ResultP>Your message has sent</ResultP>
+            <ResultP onClick={() => setSentMessage(false)}>
+              Re-sent message
+            </ResultP>
+          </ResultDiv>
+        ) : (
+          <InputsDiv>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <StyledInput placeholder="Your Name" {...register("name")} />
+              <StyledInput placeholder="Your Email" {...register("email")} />
+              <StyledInput placeholder="Subject" {...register("subject")} />
+              <Textar placeholder="Message" {...register("message")} />
+              <ContactButt>Send Message</ContactButt>
+            </form>
+          </InputsDiv>
+        )}
       </StyledAbout>
     </ParentAbout>
   );

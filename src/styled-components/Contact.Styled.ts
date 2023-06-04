@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { CircleDiv } from "./Home.Styled";
+import { CVButt } from "./About.Styled";
 
-export const ContactDIv = styled.div`
+export const ContactDiv = styled.div`
   padding: 20px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.1);
@@ -59,14 +60,59 @@ export const StyledInput = styled.input`
   height: 40px;
   padding: 10px 15px;
   border: none;
-  position: relative;
   background-color: rgba(255, 255, 255, 0.1);
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+  border-radius: 3px;
 
-  /* &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;
-  } */
+  &:focus {
+    outline: none;
+  }
+`;
+
+export const InputsDiv = styled(ContactDiv)`
+  padding: 10px 30px 30px;
+  display: block;
+`;
+
+export const Textar = styled.textarea`
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 130px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px 15px;
+  margin-top: 20px;
+  border: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+  border-radius: 3px;
+
+  &:focus {
+    outline: none;
+  }
+`;
+
+export const ContactButt = styled(CVButt)`
+  margin-top: 30px;
+`;
+
+export const ResultDiv = styled(ContactDiv)`
+  height: 300px;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+`;
+
+export const ResultP = styled.p`
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+  text-align: center;
 `;
