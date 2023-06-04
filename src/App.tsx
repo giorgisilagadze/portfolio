@@ -7,6 +7,7 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import Header from "./components/Header";
 import { useState } from "react";
+import ScrollOnTop from "./components/ScrollOnTop";
 
 function App() {
   const [menu, setMenu] = useState<boolean>(false);
@@ -23,6 +24,7 @@ function App() {
 
       <GlobalStyled />
       <Router>
+        <ScrollOnTop />
         <Header setMenu={setMenu} menu={menu} />
         <Routes>
           <Route path="/" element={<Home setMenu={setMenu} menu={menu} />} />
