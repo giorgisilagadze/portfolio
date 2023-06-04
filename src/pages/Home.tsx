@@ -26,11 +26,11 @@ const icons: arrOfIcons = [
     link: "https://www.instagram.com/silagadze_giorgi/",
   },
   {
-    src: "./images/links/linkedin.svg",
+    src: "./images/links/linkedin2.png",
     link: "https://www.linkedin.com/in/giorgi-silagadze-3bb522257/",
   },
   {
-    src: "./images/links/github.svg",
+    src: "./images/links/github.png",
     link: "https://github.com/giorgisilagadze",
   },
 ];

@@ -5,29 +5,14 @@ import {
   Title,
   Learn,
 } from "../styled-components/About.Styled";
-import { Project } from "../styled-components/Portfolio.Styled";
+import {
+  Project,
+  ProjectCont,
+  ProjectDiv,
+} from "../styled-components/Portfolio.Styled";
 import data from "../../data.json";
-import { useRef, useEffect } from "react";
 
 export default function Portfolio() {
-  const skillsRef = useRef<any>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add(".animate-project:hover");
-        }
-      });
-    });
-
-    observer.observe(skillsRef.current);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
   return (
     <ParentAbout>
       <StyledAbout>
@@ -39,12 +24,23 @@ export default function Portfolio() {
         {data.projects.map((item) => (
           <div key={Math.random()}>
             {item.screens.map((screen) => (
-              <Project
-                src={screen}
-                alt=""
-                ref={skillsRef}
-                key={Math.random()}
-              />
+              <div>
+                <ProjectCont
+                  key={Math.random()}
+                  bg={screen}
+                  // initial={{ transform: "scale(0)" }}
+                  // // animate={{ transform: "scale(1)" }}
+                  // transition={{ duration: 4 }}
+                  // whileInView={{ transform: "scale(1)" }}
+                >
+                  <ProjectDiv
+                    initial={{ transform: "scale(0)" }}
+                    // animate={{ transform: "scale(1)" }}
+                    transition={{ duration: 4 }}
+                    whileInView={{ transform: "scale(1)" }}
+                  ></ProjectDiv>
+                </ProjectCont>
+              </div>
             ))}
           </div>
         ))}
