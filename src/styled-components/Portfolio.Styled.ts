@@ -31,6 +31,35 @@ export const ProjectDiv = styled(motion.div)`
   height: 100%;
   top: 0;
   left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+`;
+
+export const Frame = styled.div`
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border-top: 5px solid white;
+  border-left: 5px solid white;
+`;
+
+export const FrameBott = styled.div`
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  border-bottom: 5px solid white;
+  border-right: 5px solid white;
+`;
+
+export const MidDiv = styled.div`
+  position: absolute;
+  width: 50px;
+  height: 50px;
   background-color: red;
-  opacity: 0.1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
