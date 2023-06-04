@@ -19,6 +19,8 @@ import {
   ContactButt,
   ResultDiv,
   ResultP,
+  Check,
+  ResentP,
 } from "../styled-components/Contact.Styled";
 import data from "../../data.json";
 import { useForm } from "react-hook-form";
@@ -88,10 +90,11 @@ export default function Contact() {
         ))}
         {sentMessage ? (
           <ResultDiv>
-            <ResultP>Your message has sent</ResultP>
-            <ResultP onClick={() => setSentMessage(false)}>
+            <Check src="./images/check2.png" alt="" />
+            <ResultP>Your message has been sent</ResultP>
+            <ResentP onClick={() => setSentMessage(false)}>
               Re-sent message
-            </ResultP>
+            </ResentP>
           </ResultDiv>
         ) : (
           <InputsDiv>

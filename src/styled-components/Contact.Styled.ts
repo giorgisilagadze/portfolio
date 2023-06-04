@@ -116,3 +116,17 @@ export const ResultP = styled.p`
   color: white;
   text-align: center;
 `;
+
+export const ResentP = styled(ResultP)`
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #18d26e;
+`;
+
+export const Check = styled.img`
+  filter: invert(66%) sepia(76%) saturate(3285%) hue-rotate(104deg)
+    brightness(106%) contrast(81%);
+  width: 60px;
+  height: 60px;
+`;
