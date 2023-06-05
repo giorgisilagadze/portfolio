@@ -74,7 +74,7 @@
     "projects": [
         {
             "title": "all",
-            "screens": ["./images/works/space.png", "./images/works/dictionary.png", "./images/works/Todo.png", "./images/works/sign-up-form.png", "./images/works/calculator.png", "./images/works/tic-tac-toe.png"],
+            "screens": ["./images/works/space.png", "./images/works/dictionary.png", "./images/works/Todo.png", "./images/works/sign-up-form.png", "./images/works/calculator.png", "./images/works/tic-tac-toe.png", "./images/works/photosnap.png" ],
             "projName": ["Space-tourism-website", "Dictionary app", "Todo", "Sign-up-form"],
             "link": [
                 {
@@ -100,12 +100,16 @@
                 {
                     "github": "https://github.com/giorgisilagadze/tic-tac-toe",
                     "live": "https://tic-tac-toe-one-zeta.vercel.app/"
+                },
+                {
+                    "github": "https://github.com/giorgisilagadze/photosnap-multi-page-website-005",
+                    "live": "https://photosnap-multi-page-website-005.vercel.app/"
                 }
             ]
         },
         {
             "title": "react",
-            "screens": ["./images/works/space.png", "./images/works/dictionary.png", "./images/works/Todo.png", "./images/works/sign-up-form.png"],
+            "screens": ["./images/works/space.png", "./images/works/dictionary.png", "./images/works/Todo.png", "./images/works/sign-up-form.png", "./images/works/photosnap.png"],
             "projName": ["Space-tourism-website", "Dictionary app", "Todo", "Sign-up-form"],
             "link": [
                 {
@@ -123,6 +127,10 @@
                 {
                     "github": "https://github.com/giorgisilagadze/sign-up-form-React",
                     "live": "https://sign-up-form-react-ashen.vercel.app/"
+                },
+                {
+                    "github": "https://github.com/giorgisilagadze/photosnap-multi-page-website-005",
+                    "live": "https://photosnap-multi-page-website-005.vercel.app/"
                 }
             ]
         },
