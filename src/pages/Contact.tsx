@@ -27,7 +27,6 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useState } from "react";
-import nodemailer from "nodemailer";
 
 const schema = yup
   .object({

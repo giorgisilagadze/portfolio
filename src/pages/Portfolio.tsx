@@ -68,7 +68,6 @@ export default function Portfolio() {
             >
               <ProjectDiv
                 initial={{ transform: "scale(0)", opacity: 0 }}
-                // animate={{ transform: "scale(1)" }}
                 transition={{ duration: 1 }}
                 whileInView={{ transform: "scale(1)", opacity: 1 }}
               >

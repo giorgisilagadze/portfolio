@@ -12,7 +12,6 @@ export const GlobalStyled = createGlobalStyle`
         min-height: 100vh;
         background: url("./images/kyrie.jpeg") no-repeat ;
         background-size: 100vw 100vh;
-        /* padding: 0px 24px; */
         background-color: black;
 
     }
