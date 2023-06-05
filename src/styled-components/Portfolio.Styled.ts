@@ -56,10 +56,24 @@ export const FrameBott = styled.div`
 
 export const MidDiv = styled.div`
   position: absolute;
-  width: 50px;
   height: 50px;
-  background-color: red;
+  width: 200px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 `;
+
+export const ProjectName = styled.p`
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+  text-align: center;
+`
+export const LinksDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15px;
+`
