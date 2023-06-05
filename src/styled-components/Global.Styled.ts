@@ -11,7 +11,7 @@ export const GlobalStyled = createGlobalStyle`
     body {
         min-height: 100vh;
         background: url("./images/kyrie.jpeg") no-repeat ;
-        background-size: 100vw 100%;
+        background-size: 100vw 100vh;
         /* padding: 0px 24px; */
         background-color: black;
 

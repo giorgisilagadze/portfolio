@@ -102,6 +102,44 @@
                     "live": "https://tic-tac-toe-one-zeta.vercel.app/"
                 }
             ]
+        },
+        {
+            "title": "react",
+            "screens": ["./images/works/space.png", "./images/works/dictionary.png", "./images/works/Todo.png", "./images/works/sign-up-form.png"],
+            "projName": ["Space-tourism-website", "Dictionary app", "Todo", "Sign-up-form"],
+            "link": [
+                {
+                    "github": "https://github.com/giorgisilagadze/space-tourism-website-React",
+                    "live": "https://space-tourism-website-react-nu.vercel.app/"
+                },
+                {
+                    "github": "https://github.com/giorgisilagadze/dictionary-web-app-React",
+                    "live": "https://dictionary-web-app-react.vercel.app/"
+                },
+                {
+                    "github": "https://github.com/giorgisilagadze/ToDo-React",
+                    "live": "https://to-do-react-ruddy.vercel.app/"
+                },
+                {
+                    "github": "https://github.com/giorgisilagadze/sign-up-form-React",
+                    "live": "https://sign-up-form-react-ashen.vercel.app/"
+                }
+            ]
+        },
+        {
+            "title": "js",
+            "screens": [ "./images/works/calculator.png", "./images/works/tic-tac-toe.png"],
+            "projName": [""],
+            "link": [
+                {
+                    "github": "https://github.com/giorgisilagadze/calculator-app",
+                    "live": "https://calculator-app-nine-delta.vercel.app/"
+                },
+                {
+                    "github": "https://github.com/giorgisilagadze/tic-tac-toe",
+                    "live": "https://tic-tac-toe-one-zeta.vercel.app/"
+                }
+            ]
         }
     ],
     "contact": [

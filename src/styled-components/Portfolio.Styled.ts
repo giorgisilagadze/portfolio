@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 interface Styles {
-  bg: string;
+  bg?: string;
+  bgc?: string;
 }
 
 export const Project = styled(motion.img)`
@@ -16,8 +17,8 @@ export const Project = styled(motion.img)`
 
 export const ProjectCont = styled(motion.div)<Styles>`
   width: 100%;
-  min-height: 236px;
-  height: fit-content;
+  height: 63vw;
+  max-height: 320px;
   margin: 30px auto 0px;
   border-radius: 5px;
   background-image: url(${({ bg }) => bg});
@@ -76,4 +77,23 @@ export const LinksDiv = styled.div`
   align-items: center;
   gap: 20px;
   margin-top: 15px;
+`
+
+export const CategoryDiv = styled(LinksDiv)`
+  gap: 10px;
+  margin-top: 20px;
+`
+
+export const SingleCategoryDiv = styled.div<Styles>`
+  width: 50px;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: white;
+  background-color: ${({bgc}) => bgc};
 `
