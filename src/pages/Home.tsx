@@ -46,7 +46,7 @@ export default function Home({ menu }: Hooks) {
       <div>
         <Name>Giorgi Silagadze</Name>
         <Hometxt>
-          I'm a passionate <SpanProf>web developer</SpanProf> from Georgia
+          Passionate <SpanProf>web developer</SpanProf> from Georgia
         </Hometxt>
       </div>
       <IconsDiv>
