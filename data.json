@@ -74,8 +74,8 @@
     "projects": [
         {
             "title": "all",
-            "screens": ["./images/works/space.png", "./images/works/dictionary.png", "./images/works/Todo.png", "./images/works/sign-up-form.png", "./images/works/calculator.png", "./images/works/tic-tac-toe.png", "./images/works/photosnap.png" ],
-            "projName": ["Space-tourism-website", "Dictionary app", "Todo", "Sign-up-form"],
+            "screens": ["./images/works/space.png", "./images/works/dictionary.png", "./images/works/Todo.png", "./images/works/sign-up-form.png", "./images/works/calculator.png", "./images/works/tic-tac-toe.png", "./images/works/photosnap.png", "./images/works/todoscreen.png", "./images/works/faq.png" ],
+            "projName": ["Space-tourism-website", "Dictionary App", "Todo App", "Sign-up-form", "Calculator App", "Tic-Tac-Toe App", "Photosnap Web-App", "Todo App", "FAQ Accordion Card"],
             "link": [
                 {
                     "github": "https://github.com/giorgisilagadze/space-tourism-website-React",
@@ -104,13 +104,21 @@
                 {
                     "github": "https://github.com/giorgisilagadze/photosnap-multi-page-website-005",
                     "live": "https://photosnap-multi-page-website-005.vercel.app/"
+                },
+                {
+                    "github": "https://github.com/giorgisilagadze/ToDo",
+                    "live": "https://to-do-delta-nine.vercel.app/"
+                },
+                {
+                    "github": "https://github.com/giorgisilagadze/FAQ-React",
+                    "live": "https://faq-react-eight.vercel.app/"
                 }
             ]
         },
         {
             "title": "react",
-            "screens": ["./images/works/space.png", "./images/works/dictionary.png", "./images/works/Todo.png", "./images/works/sign-up-form.png", "./images/works/photosnap.png"],
-            "projName": ["Space-tourism-website", "Dictionary app", "Todo", "Sign-up-form"],
+            "screens": ["./images/works/space.png", "./images/works/dictionary.png", "./images/works/Todo.png", "./images/works/sign-up-form.png", "./images/works/photosnap.png", "./images/works/faq.png"],
+            "projName": ["Space-tourism-website", "Dictionary App", "Todo", "Sign-up-form", "Photosnap Web-App", "FAQ Accordion Card"],
             "link": [
                 {
                     "github": "https://github.com/giorgisilagadze/space-tourism-website-React",
@@ -131,13 +139,17 @@
                 {
                     "github": "https://github.com/giorgisilagadze/photosnap-multi-page-website-005",
                     "live": "https://photosnap-multi-page-website-005.vercel.app/"
+                },
+                {
+                    "github": "https://github.com/giorgisilagadze/FAQ-React",
+                    "live": "https://faq-react-eight.vercel.app/"
                 }
             ]
         },
         {
-            "title": "js",
-            "screens": [ "./images/works/calculator.png", "./images/works/tic-tac-toe.png"],
-            "projName": [""],
+            "title": "JS",
+            "screens": [ "./images/works/calculator.png", "./images/works/tic-tac-toe.png", "./images/works/todoscreen.png"],
+            "projName": ["Calculator App", "Tic-Tac-Toe App", "Todo App"],
             "link": [
                 {
                     "github": "https://github.com/giorgisilagadze/calculator-app",
@@ -146,6 +158,21 @@
                 {
                     "github": "https://github.com/giorgisilagadze/tic-tac-toe",
                     "live": "https://tic-tac-toe-one-zeta.vercel.app/"
+                },
+                {
+                    "github": "https://github.com/giorgisilagadze/ToDo",
+                    "live": "https://to-do-delta-nine.vercel.app/"
+                }
+            ]
+        },
+        {
+            "title": "TS",
+            "screens": ["./images/works/space.png"],
+            "projName": ["Space-tourism-website"],
+            "link": [
+                {
+                    "github": "https://github.com/giorgisilagadze/space-tourism-website-React",
+                    "live": "https://space-tourism-website-react-nu.vercel.app/"
                 }
             ]
         }

@@ -6,7 +6,6 @@ import {
   Learn,
 } from "../styled-components/About.Styled";
 import {
-  Project,
   ProjectCont,
   ProjectDiv,
   Frame,
@@ -16,6 +15,8 @@ import {
   LinksDiv,
   CategoryDiv,
   SingleCategoryDiv,
+  VisitGithub,
+  StyledA,
 } from "../styled-components/Portfolio.Styled";
 import data from "../../data.json";
 import { IconLinks } from "../styled-components/Contact.Styled";
@@ -88,6 +89,12 @@ export default function Portfolio() {
             </ProjectCont>
           </div>
         ))}
+        <StyledA
+          href="https://github.com/giorgisilagadze?tab=repositories"
+          target="_blank"
+        >
+          <VisitGithub>SEE MORE ON GITHUB</VisitGithub>
+        </StyledA>
       </StyledAbout>
     </ParentAbout>
   );

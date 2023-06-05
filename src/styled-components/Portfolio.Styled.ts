@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { CVButt } from "./About.Styled";
 
 interface Styles {
   bg?: string;
@@ -96,4 +97,14 @@ export const SingleCategoryDiv = styled.div<Styles>`
   line-height: 18px;
   color: white;
   background-color: ${({bgc}) => bgc};
+`
+
+export const VisitGithub = styled(CVButt)`
+  font-size: 14px;
+  line-height: 18px;
+  background-color: rgba(255, 255, 255, 0.1);
+`
+
+export const StyledA = styled.a`
+  text-decoration: none;
 `
