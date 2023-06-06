@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const ParentAbout = styled.div`
   width: 100%;
@@ -6,24 +7,11 @@ export const ParentAbout = styled.div`
   overflow: auto;
 `;
 
-export const StyledAbout = styled.div`
-  @keyframes top-about {
-    0% {
-      margin-top: 164px;
-      opacity: 0;
-    }
-
-    100% {
-      margin-top: 94px;
-      opacity: 0.8;
-    }
-  }
-
+export const StyledAbout = styled(motion.div)`
   width: 100%;
   max-width: 540px;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
   margin: 94px auto 40px;
-  animation: top-about 0.5s ease-in;
   padding: 24px 30px 60px;
 
   hr {

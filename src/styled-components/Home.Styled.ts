@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 interface Styles {
   gap?: string;
@@ -7,8 +8,8 @@ interface Styles {
   height?: string;
 }
 
-export const StyledHome = styled.div<Styles>`
-  @keyframes home {
+export const StyledHome = styled(motion.div)<Styles>`
+  /* @keyframes home {
     0% {
       margin-top: -300px;
     }
@@ -16,7 +17,7 @@ export const StyledHome = styled.div<Styles>`
     100% {
       margin-top: 0px;
     }
-  }
+  } */
 
   height: calc(100vh - 44px);
   display: flex;
@@ -26,12 +27,12 @@ export const StyledHome = styled.div<Styles>`
   gap: ${({ gap }) => gap};
   transition: 0.5s;
   margin-top: 0px;
-  animation: home 0.5s;
+  /* animation: home 0.5s; */
   overflow: hidden;
 `;
 
-export const Name = styled.h1`
-  @keyframes font-size {
+export const Name = styled(motion.h1)`
+  /* @keyframes font-size {
     0% {
       font-size: 20px;
     }
@@ -39,14 +40,14 @@ export const Name = styled.h1`
     100% {
       font-size: 30px;
     }
-  }
+  } */
 
   font-weight: 700;
   font-size: 30px;
   line-height: 22px;
   color: white;
   text-align: center;
-  animation: font-size 1s;
+  /* animation: font-size 1s; */
 `;
 
 export const Hometxt = styled.p`

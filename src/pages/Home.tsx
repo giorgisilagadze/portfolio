@@ -42,9 +42,20 @@ interface Hooks {
 
 export default function Home({ menu }: Hooks) {
   return (
-    <StyledHome gap={menu ? "20px" : "50px"}>
+    <StyledHome
+      gap={menu ? "20px" : "50px"}
+      initial={{ marginTop: "-300px" }}
+      animate={{ marginTop: "0px" }}
+      transition={{ duration: 0.5 }}
+    >
       <div>
-        <Name>Giorgi Silagadze</Name>
+        <Name
+          initial={{ fontSize: "20px" }}
+          animate={{ fontSize: "30px" }}
+          transition={{ duration: 1 }}
+        >
+          Giorgi Silagadze
+        </Name>
         <Hometxt>
           Passionate <SpanProf>web developer</SpanProf> from Georgia
         </Hometxt>

@@ -44,7 +44,11 @@ export default function About() {
 
   return (
     <ParentAbout>
-      <StyledAbout>
+      <StyledAbout
+        initial={{ marginTop: "164px", opacity: 0.1 }}
+        animate={{ marginTop: "94px", opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         <TitleDiv>
           <Title>ABOUT</Title>
           <hr />

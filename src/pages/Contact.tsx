@@ -61,7 +61,11 @@ export default function Contact() {
 
   return (
     <ParentAbout>
-      <StyledAbout>
+      <StyledAbout
+        initial={{ marginTop: "164px" }}
+        animate={{ marginTop: "94px" }}
+        transition={{ duration: 0.5 }}
+      >
         <TitleDiv>
           <Title>CONTACT</Title>
           <hr />
