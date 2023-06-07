@@ -20,6 +20,16 @@ export const StyledAbout = styled(motion.div)`
     border: none;
     background-color: #18d26e;
   }
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+    margin: 110px auto 40px;
+  }
+
+  @media (min-width: 1000px) {
+    max-width: 960px;
+    margin: 110px auto 40px;
+  }
 `;
 
 export const TitleDiv = styled.div`

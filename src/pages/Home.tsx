@@ -6,8 +6,13 @@ import {
   IconsDiv,
   Icon,
   CircleDiv,
+  PagesDiv,
+  PageNameHome,
 } from "../styled-components/Home.Styled";
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
+import { pages } from "../components/Header";
+import { StyledLink } from "../styled-components/Header.Styled";
 
 interface Icons {
   src: string;
@@ -41,12 +46,16 @@ interface Hooks {
 }
 
 export default function Home({ menu }: Hooks) {
+  const isMobile = useMediaQuery({ maxWidth: 1000 });
+
   return (
-    <StyledHome gap={menu ? "20px" : "50px"}>
+    <StyledHome
+      gap={isMobile ? (menu ? "20px" : "50px") : menu ? "20px" : "40px"}
+    >
       <div>
         <Name
           initial={{ fontSize: "20px" }}
-          animate={{ fontSize: "30px" }}
+          animate={isMobile ? { fontSize: "30px" } : { fontSize: "48px" }}
           transition={{ duration: 1 }}
         >
           Giorgi Silagadze
@@ -54,6 +63,18 @@ export default function Home({ menu }: Hooks) {
         <Hometxt>
           Passionate <SpanProf>web developer</SpanProf> from Georgia
         </Hometxt>
+        <PagesDiv>
+          {pages.map((item) => (
+            <StyledLink to={item.link}>
+              <PageNameHome
+                opa={location.pathname == item.link ? "1" : "0.7"}
+                display={location.pathname == item.link ? "block" : "none"}
+              >
+                {item.name}
+              </PageNameHome>
+            </StyledLink>
+          ))}
+        </PagesDiv>
       </div>
       <IconsDiv>
         {icons.map((item) => (

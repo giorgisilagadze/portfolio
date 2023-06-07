@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { PagesDiv } from "./Home.Styled";
 
 interface Styles {
   menu?: boolean;
@@ -21,6 +22,17 @@ export const StyledHeader = styled.header<Styles>`
   align-items: center;
   background-color: ${({ bg }) => bg};
   padding: 16px 24px;
+
+  @media (min-width: 540px) {
+    gap: 255px;
+    justify-content: center;
+  }
+
+  @media (min-width: 768px) {
+    height: 80px;
+    transition: 0.3s;
+    gap: 370px;
+  }
 `;
 
 export const Iconhamb = styled.img`
@@ -29,6 +41,10 @@ export const Iconhamb = styled.img`
   width: 20px;
   height: 20px;
   z-index: 103;
+
+  @media (min-width: 1000px) {
+    display: none;
+  }
 `;
 
 export const Menu = styled.div<Styles>`
@@ -80,7 +96,7 @@ export const PageName = styled.p<Styles>`
   &::after {
     content: "";
     display: ${({ display }) => display};
-    width: 20px;
+    width: 25px;
     border-bottom: 2px solid #18d26e;
   }
 `;
@@ -106,4 +122,21 @@ export const HeaderName = styled.h1`
   color: white;
   margin-top: 0px;
   animation: top 0.3s;
+
+  @media (min-width: 540px) {
+    margin-left: -20px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    line-height: 40px;
+    transition: 0.3s;
+    margin-left: 0px;
+  }
+`;
+
+export const PagesDivHead = styled(PagesDiv)`
+  @media (min-width: 1000px) {
+    margin-top: 0px;
+  }
 `;
