@@ -33,9 +33,9 @@ export default function Portfolio() {
   return (
     <ParentAbout>
       <StyledAbout
-        initial={{ marginTop: "164px" }}
-        animate={{ marginTop: "94px" }}
-        transition={{ duration: 0.5 }}
+        initial={{ marginTop: "164px", opacity: 0 }}
+        animate={{ marginTop: "94px", opacity: 1 }}
+        transition={{ duration: 0.7, ease: "easeIn" }}
       >
         <TitleDiv>
           <Title>PORTFOLIO</Title>

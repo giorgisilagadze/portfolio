@@ -105,5 +105,5 @@ export const HeaderName = styled.h1`
   line-height: 32px;
   color: white;
   margin-top: 0px;
-  animation: top 0.5s;
+  animation: top 0.3s;
 `;

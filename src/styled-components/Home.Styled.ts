@@ -9,7 +9,7 @@ interface Styles {
 }
 
 export const StyledHome = styled(motion.div)<Styles>`
-  /* @keyframes home {
+  @keyframes home {
     0% {
       margin-top: -300px;
     }
@@ -17,7 +17,7 @@ export const StyledHome = styled(motion.div)<Styles>`
     100% {
       margin-top: 0px;
     }
-  } */
+  }
 
   height: calc(100vh - 44px);
   display: flex;
@@ -27,7 +27,7 @@ export const StyledHome = styled(motion.div)<Styles>`
   gap: ${({ gap }) => gap};
   transition: 0.5s;
   margin-top: 0px;
-  /* animation: home 0.5s; */
+  animation: home 0.3s;
   overflow: hidden;
 `;
 
