@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { PagesDiv } from "./Home.Styled";
 
 interface Styles {
   menu?: boolean;
@@ -24,7 +23,7 @@ export const StyledHeader = styled.header<Styles>`
   padding: 16px 24px;
 
   @media (min-width: 540px) {
-    gap: 255px;
+    gap: 205px;
     justify-content: center;
   }
 
@@ -32,6 +31,7 @@ export const StyledHeader = styled.header<Styles>`
     height: 80px;
     transition: 0.3s;
     gap: 370px;
+    justify-content: center;
   }
 `;
 
@@ -88,6 +88,7 @@ export const Background = styled.div<Styles>`
 export const PageName = styled.p<Styles>`
   font-weight: 400;
   font-size: 16px;
+  height: 24px;
   line-height: 24px;
   color: white;
   margin-top: 20px;
@@ -132,11 +133,5 @@ export const HeaderName = styled.h1`
     line-height: 40px;
     transition: 0.3s;
     margin-left: 0px;
-  }
-`;
-
-export const PagesDivHead = styled(PagesDiv)`
-  @media (min-width: 1000px) {
-    margin-top: 0px;
   }
 `;

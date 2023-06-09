@@ -69,6 +69,7 @@ export default function Home({ menu }: Hooks) {
               <PageNameHome
                 opa={location.pathname == item.link ? "1" : "0.7"}
                 display={location.pathname == item.link ? "block" : "none"}
+                anim={location.pathname == item.link ? "none" : "opa"}
               >
                 {item.name}
               </PageNameHome>

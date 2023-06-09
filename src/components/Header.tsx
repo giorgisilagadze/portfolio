@@ -7,10 +7,9 @@ import {
   StyledLink,
   HeaderName,
   FixedHeader,
-  PagesDivHead,
 } from "../styled-components/Header.Styled";
 import { useLocation } from "react-router-dom";
-import { PagesDiv } from "../styled-components/Home.Styled";
+import { PagesDivHead } from "../styled-components/Home.Styled";
 import { PageNameHome } from "../styled-components/Home.Styled";
 
 interface Hooks {
@@ -65,18 +64,21 @@ export default function Header({ setMenu, menu }: Hooks) {
             alt="hamburger"
             onClick={() => setMenu(!menu)}
           />
-          <PagesDivHead>
-            {pages.map((item) => (
-              <StyledLink to={item.link}>
-                <PageNameHome
-                  opa={location.pathname == item.link ? "1" : "0.7"}
-                  display={location.pathname == item.link ? "block" : "none"}
-                >
-                  {item.name}
-                </PageNameHome>
-              </StyledLink>
-            ))}
-          </PagesDivHead>
+          {location.pathname != "/" ? (
+            <PagesDivHead>
+              {pages.map((item) => (
+                <StyledLink to={item.link} key={Math.random()}>
+                  <PageNameHome
+                    opa={location.pathname == item.link ? "1" : "0.7"}
+                    display={location.pathname == item.link ? "block" : "none"}
+                  >
+                    {item.name}
+                  </PageNameHome>
+                </StyledLink>
+              ))}
+            </PagesDivHead>
+          ) : null}
+
           <Background menu={menu} />
           {menu ? (
             <Menu menu={menu}>

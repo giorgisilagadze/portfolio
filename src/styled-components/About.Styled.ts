@@ -62,6 +62,11 @@ export const ProfilePict = styled.img`
   display: block;
   filter: invert(0%) sepia(89%) saturate(0%) hue-rotate(257deg) brightness(108%)
     contrast(99%);
+
+  @media (min-width: 1000px) {
+    width: 285px;
+    height: 320px;
+  }
 `;
 
 export const Prof = styled(Learn)`
@@ -131,6 +136,15 @@ export const SkillsDiv = styled.div`
   width: 100%;
 `;
 
+export const TabletDiv = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 20px;
+  }
+`;
+
 export const SingleSkillDiv = styled.div`
   width: 100%;
   display: flex;
@@ -139,7 +153,12 @@ export const SingleSkillDiv = styled.div`
   padding: 15px;
   background-color: rgba(255, 255, 255, 0.1);
   margin-top: 20px;
-  border-radius: 5px;
+
+  @media (min-width: 768px) {
+    width: 204px;
+    margin-top: 0px;
+    height: 65px;
+  }
 `;
 
 export const SkillIcon = styled.img`
@@ -176,4 +195,11 @@ export const Download = styled.img`
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(351deg)
     brightness(400%) contrast(104%);
   margin-top: -6px;
+`;
+
+export const AboutFlexDiv = styled.div`
+  @media (min-width: 1000px) {
+    display: flex;
+    gap: 20px;
+  }
 `;

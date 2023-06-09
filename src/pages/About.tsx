@@ -19,6 +19,8 @@ import {
   CVButt,
   Download,
   SkillsParent,
+  TabletDiv,
+  AboutFlexDiv,
 } from "../styled-components/About.Styled";
 import data from "../../data.json";
 import { useEffect, useRef } from "react";
@@ -54,30 +56,36 @@ export default function About() {
           <hr />
         </TitleDiv>
         <Learn>Learn more about me</Learn>
-        <ProfilePict src="./images/profile-copy.jpeg" />
-        <Prof>Software Engineer</Prof>
-        <AbDiv>
-          {data.about.map((item) => (
-            <AbSingleDiv key={Math.random()}>
-              <Arrow src="./images/arrow.png" alt="" />
-              <AbTitle>{item.first}</AbTitle>
-              <AbAnsw>{item.second}</AbAnsw>
-            </AbSingleDiv>
-          ))}
-        </AbDiv>
-        <AbTxt>{data["about-text"].sum}</AbTxt>
+        <AboutFlexDiv>
+          <ProfilePict src="./images/profile-copy.jpeg" />
+          <div>
+            <Prof>Software Engineer</Prof>
+            <AbDiv>
+              {data.about.map((item) => (
+                <AbSingleDiv key={Math.random()}>
+                  <Arrow src="./images/arrow.png" alt="" />
+                  <AbTitle>{item.first}</AbTitle>
+                  <AbAnsw>{item.second}</AbAnsw>
+                </AbSingleDiv>
+              ))}
+            </AbDiv>
+            <AbTxt>{data["about-text"].sum}</AbTxt>
+          </div>
+        </AboutFlexDiv>
         <SkillsParent ref={skillsRef}>
           <SkillsDiv>
             <TitleDiv>
               <Title>SKILLS</Title>
               <hr />
             </TitleDiv>
-            {data.skills.map((item) => (
-              <SingleSkillDiv key={Math.random()}>
-                <SkillIcon src={item.src} alt="skill-icon" />
-                <AbTitle>{item.skill}</AbTitle>
-              </SingleSkillDiv>
-            ))}
+            <TabletDiv>
+              {data.skills.map((item) => (
+                <SingleSkillDiv key={Math.random()}>
+                  <SkillIcon src={item.src} alt="skill-icon" />
+                  <AbTitle>{item.skill}</AbTitle>
+                </SingleSkillDiv>
+              ))}
+            </TabletDiv>
           </SkillsDiv>
         </SkillsParent>
         <CV href="../../CV.pdf" download>

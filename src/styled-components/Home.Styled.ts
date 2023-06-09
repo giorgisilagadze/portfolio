@@ -7,6 +7,7 @@ interface Styles {
   z?: string;
   width?: string;
   height?: string;
+  anim?: string;
 }
 
 export const StyledHome = styled(motion.div)<Styles>`
@@ -133,7 +134,13 @@ export const PagesDiv = styled.div`
   }
 `;
 
-export const PageNameHome = styled(PageName)`
+export const PagesDivHead = styled(PagesDiv)`
+  @media (min-width: 1000px) {
+    margin-top: 0px;
+  }
+`;
+
+export const PageNameHome = styled(PageName)<Styles>`
   @keyframes line {
     0% {
       width: 0px;
@@ -174,7 +181,7 @@ export const PageNameHome = styled(PageName)`
 
     &:hover {
       opacity: 1;
-      animation: opa 0.5s;
+      animation: ${({ anim }) => anim} 0.5s;
     }
   }
 `;
