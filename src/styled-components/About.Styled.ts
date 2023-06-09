@@ -81,14 +81,18 @@ export const Arrow = styled.img`
   width: 16px;
   height: 16px;
   transform: rotate(90deg);
-  /* filter: invert(85%) sepia(32%) saturate(5710%) hue-rotate(90deg)
-    brightness(200%) contrast(82%); */
   filter: invert(81%) sepia(15%) saturate(1645%) hue-rotate(88deg)
     brightness(99%) contrast(87%);
 `;
 
 export const AbDiv = styled.div`
   margin: 16px auto 0px;
+
+  @media (min-width: 1000px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 `;
 
 export const AbSingleDiv = styled.div`
@@ -96,6 +100,11 @@ export const AbSingleDiv = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+
+  @media (min-width: 1000px) {
+    width: 240px;
+    margin-top: 5px;
+  }
 `;
 
 export const AbTitle = styled.p`
@@ -143,6 +152,10 @@ export const TabletDiv = styled.div`
     gap: 24px;
     margin-top: 20px;
   }
+
+  @media (min-width: 1000px) {
+    justify-content: center;
+  }
 `;
 
 export const SingleSkillDiv = styled.div`
@@ -156,6 +169,12 @@ export const SingleSkillDiv = styled.div`
 
   @media (min-width: 768px) {
     width: 204px;
+    margin-top: 0px;
+    height: 65px;
+  }
+
+  @media (min-width: 1000px) {
+    width: 284px;
     margin-top: 0px;
     height: 65px;
   }
@@ -200,6 +219,6 @@ export const Download = styled.img`
 export const AboutFlexDiv = styled.div`
   @media (min-width: 1000px) {
     display: flex;
-    gap: 20px;
+    gap: 24px;
   }
 `;

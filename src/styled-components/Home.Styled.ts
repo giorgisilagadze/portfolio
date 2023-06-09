@@ -135,8 +135,10 @@ export const PagesDiv = styled.div`
 `;
 
 export const PagesDivHead = styled(PagesDiv)`
+  display: none;
   @media (min-width: 1000px) {
     margin-top: 0px;
+    display: flex;
   }
 `;
 

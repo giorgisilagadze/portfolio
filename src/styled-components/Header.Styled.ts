@@ -21,6 +21,7 @@ export const StyledHeader = styled.header<Styles>`
   align-items: center;
   background-color: ${({ bg }) => bg};
   padding: 16px 24px;
+  width: 100%;
 
   @media (min-width: 540px) {
     gap: 205px;
