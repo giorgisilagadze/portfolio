@@ -24,6 +24,7 @@ import {
 } from "../styled-components/About.Styled";
 import data from "../../data.json";
 import { useEffect, useRef } from "react";
+import { useMediaQuery } from "react-responsive";
 
 export default function About() {
   const skillsRef = useRef<any>(null);
@@ -43,6 +44,8 @@ export default function About() {
       observer.disconnect();
     };
   }, []);
+
+  const isMobile = useMediaQuery({ maxWidth: 1000 });
 
   return (
     <ParentAbout>
@@ -80,7 +83,20 @@ export default function About() {
             </TitleDiv>
             <TabletDiv>
               {data.skills.map((item) => (
-                <SingleSkillDiv key={Math.random()}>
+                <SingleSkillDiv
+                  key={Math.random()}
+                  initial={
+                    isMobile ? { marginTop: "20px" } : { marginTop: "0px" }
+                  }
+                  whileHover={
+                    isMobile
+                      ? { marginTop: "20px" }
+                      : {
+                          marginTop: "-10px",
+                        }
+                  }
+                  transition={{ type: "spring", stiffness: 200 }}
+                >
                   <SkillIcon src={item.src} alt="skill-icon" />
                   <AbTitle>{item.skill}</AbTitle>
                 </SingleSkillDiv>

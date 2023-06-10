@@ -31,8 +31,11 @@ export const StyledHeader = styled.header<Styles>`
   @media (min-width: 768px) {
     height: 80px;
     transition: 0.3s;
-    gap: 370px;
+    gap: 330px;
     justify-content: center;
+  }
+  @media (min-width: 1440px) {
+    gap: 560px;
   }
 `;
 

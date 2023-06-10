@@ -30,6 +30,11 @@ export const StyledAbout = styled(motion.div)`
     max-width: 960px;
     margin: 110px auto 40px;
   }
+
+  @media (min-width: 1440px) {
+    max-width: 1320px;
+    padding: 30px 45px 60px;
+  }
 `;
 
 export const TitleDiv = styled.div`
@@ -66,6 +71,11 @@ export const ProfilePict = styled.img`
   @media (min-width: 1000px) {
     width: 285px;
     height: 320px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 404px;
+    height: 455px;
   }
 `;
 
@@ -104,6 +114,11 @@ export const AbSingleDiv = styled.div`
   @media (min-width: 1000px) {
     width: 240px;
     margin-top: 5px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 260px;
+    margin-top: 10px;
   }
 `;
 
@@ -158,7 +173,16 @@ export const TabletDiv = styled.div`
   }
 `;
 
-export const SingleSkillDiv = styled.div`
+export const SingleSkillDiv = styled(motion.div)`
+  @keyframes bgcolor {
+    0% {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    100% {
+      background-color: #18d26e;
+    }
+  }
+
   width: 100%;
   display: flex;
   align-items: center;
@@ -177,6 +201,16 @@ export const SingleSkillDiv = styled.div`
     width: 284px;
     margin-top: 0px;
     height: 65px;
+    cursor: pointer;
+
+    &:hover {
+      animation: bgcolor 1s;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    width: 390px;
+    height: 65px;
   }
 `;
 
@@ -186,6 +220,15 @@ export const SkillIcon = styled.img`
 `;
 
 export const CVButt = styled.button`
+  @keyframes bgcolorCv {
+    0% {
+      background-color: #18d26e;
+    }
+    100% {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
   width: 170px;
   height: 50px;
   border-radius: 10px;
@@ -200,6 +243,13 @@ export const CVButt = styled.button`
   font-size: 16px;
   line-height: 24px;
   color: white;
+
+  @media (min-width: 1000px) {
+    cursor: pointer;
+    &:hover {
+      animation: bgcolorCv 1s;
+    }
+  }
 `;
 
 export const CV = styled.a`

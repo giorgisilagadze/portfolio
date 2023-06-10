@@ -17,6 +17,7 @@ import {
   SingleCategoryDiv,
   VisitGithub,
   StyledA,
+  FromTabDiv,
 } from "../styled-components/Portfolio.Styled";
 import data from "../../data.json";
 import { IconLinks } from "../styled-components/Contact.Styled";
@@ -60,38 +61,39 @@ export default function Portfolio() {
             </SingleCategoryDiv>
           ))}
         </CategoryDiv>
-
-        {category?.screens.map((screen, index) => (
-          <div key={Math.random()}>
-            <ProjectCont
-              key={Math.random()}
-              bg={screen}
-              initial={{ transform: "scale(0)" }}
-              animate={{ transform: "scale(1)" }}
-              transition={{ duration: 0.5 }}
-            >
-              <ProjectDiv
-                initial={{ transform: "scale(0)", opacity: 0 }}
-                transition={{ duration: 1 }}
-                whileInView={{ transform: "scale(1)", opacity: 1 }}
+        <FromTabDiv>
+          {category?.screens.map((screen, index) => (
+            <div key={Math.random()}>
+              <ProjectCont
+                key={Math.random()}
+                bg={screen}
+                initial={{ transform: "scale(0)" }}
+                animate={{ transform: "scale(1)" }}
+                transition={{ duration: 0.5 }}
               >
-                <Frame />
-                <MidDiv>
-                  <ProjectName>{category.projName[index]}</ProjectName>
-                  <LinksDiv>
-                    <a href={category.link[index]?.github} target="_blank">
-                      <IconLinks src="./images/links/github.png" alt="" />
-                    </a>
-                    <a href={category.link[index]?.live} target="_blank">
-                      <IconLinks src="./images/link.png" alt="" />
-                    </a>
-                  </LinksDiv>
-                </MidDiv>
-                <FrameBott />
-              </ProjectDiv>
-            </ProjectCont>
-          </div>
-        ))}
+                <ProjectDiv
+                  initial={{ transform: "scale(0)", opacity: 0 }}
+                  transition={{ duration: 1 }}
+                  whileInView={{ transform: "scale(1)", opacity: 1 }}
+                >
+                  <Frame />
+                  <MidDiv>
+                    <ProjectName>{category.projName[index]}</ProjectName>
+                    <LinksDiv>
+                      <a href={category.link[index]?.github} target="_blank">
+                        <IconLinks src="./images/links/github.png" alt="" />
+                      </a>
+                      <a href={category.link[index]?.live} target="_blank">
+                        <IconLinks src="./images/link.png" alt="" />
+                      </a>
+                    </LinksDiv>
+                  </MidDiv>
+                  <FrameBott />
+                </ProjectDiv>
+              </ProjectCont>
+            </div>
+          ))}
+        </FromTabDiv>
         <StyledA
           href="https://github.com/giorgisilagadze?tab=repositories"
           target="_blank"

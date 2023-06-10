@@ -25,6 +25,21 @@ export const ProjectCont = styled(motion.div)<Styles>`
   background-image: url(${({ bg }) => bg});
   background-size: 100% 100%;
   position: relative;
+
+  @media (min-width: 768px) {
+    width: 315px;
+    height: 238px;
+  }
+
+  @media (min-width: 1000px) {
+    width: 280px;
+    height: 212px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 390px;
+    height: 303px;
+  }
 `;
 
 export const ProjectDiv = styled(motion.div)`
@@ -71,19 +86,19 @@ export const ProjectName = styled.p`
   line-height: 20px;
   color: white;
   text-align: center;
-`
+`;
 export const LinksDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   margin-top: 15px;
-`
+`;
 
 export const CategoryDiv = styled(LinksDiv)`
   gap: 10px;
   margin-top: 20px;
-`
+`;
 
 export const SingleCategoryDiv = styled.div<Styles>`
   width: 50px;
@@ -96,15 +111,23 @@ export const SingleCategoryDiv = styled.div<Styles>`
   font-size: 14px;
   line-height: 18px;
   color: white;
-  background-color: ${({bgc}) => bgc};
-`
+  background-color: ${({ bgc }) => bgc};
+`;
 
 export const VisitGithub = styled(CVButt)`
   font-size: 14px;
   line-height: 18px;
   background-color: rgba(255, 255, 255, 0.1);
-`
+`;
 
 export const StyledA = styled.a`
   text-decoration: none;
-`
+`;
+
+export const FromTabDiv = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+  }
+`;
