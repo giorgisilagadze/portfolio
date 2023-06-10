@@ -21,6 +21,8 @@ import {
   ResultP,
   Check,
   ResentP,
+  ContactTab,
+  InputFlex,
 } from "../styled-components/Contact.Styled";
 import data from "../../data.json";
 import { useForm } from "react-hook-form";
@@ -71,27 +73,33 @@ export default function Contact() {
           <hr />
         </TitleDiv>
         <Learn>CONTACT ME</Learn>
-        {data.contact.map((item, index) => (
-          <ContactDiv key={Math.random()}>
-            <IconDiv>
-              <IconCont src={item.icon} />
-            </IconDiv>
-            <div>
-              <TitleCont>{item.title}</TitleCont>
-              <LinksDiv>
-                {item.info.map((cont, i) =>
-                  index == 0 ? (
-                    <a href={item.link[i]} key={Math.random()} target="_blank">
-                      <IconLinks src={cont} key={Math.random()} />
-                    </a>
-                  ) : (
-                    <InfoCont key={Math.random()}>{cont}</InfoCont>
-                  )
-                )}
-              </LinksDiv>
-            </div>
-          </ContactDiv>
-        ))}
+        <ContactTab>
+          {data.contact.map((item, index) => (
+            <ContactDiv key={Math.random()}>
+              <IconDiv>
+                <IconCont src={item.icon} />
+              </IconDiv>
+              <div>
+                <TitleCont>{item.title}</TitleCont>
+                <LinksDiv>
+                  {item.info.map((cont, i) =>
+                    index == 0 ? (
+                      <a
+                        href={item.link[i]}
+                        key={Math.random()}
+                        target="_blank"
+                      >
+                        <IconLinks src={cont} key={Math.random()} />
+                      </a>
+                    ) : (
+                      <InfoCont key={Math.random()}>{cont}</InfoCont>
+                    )
+                  )}
+                </LinksDiv>
+              </div>
+            </ContactDiv>
+          ))}
+        </ContactTab>
         {sentMessage ? (
           <ResultDiv>
             <Check src="./images/check2.png" alt="" />
@@ -103,8 +111,10 @@ export default function Contact() {
         ) : (
           <InputsDiv>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <StyledInput placeholder="Your Name" {...register("name")} />
-              <StyledInput placeholder="Your Email" {...register("email")} />
+              <InputFlex>
+                <StyledInput placeholder="Your Name" {...register("name")} />
+                <StyledInput placeholder="Your Email" {...register("email")} />
+              </InputFlex>
               <StyledInput placeholder="Subject" {...register("subject")} />
               <Textar placeholder="Message" {...register("message")} />
               <ContactButt>Send Message</ContactButt>

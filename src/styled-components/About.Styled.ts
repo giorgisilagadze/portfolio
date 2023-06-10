@@ -271,4 +271,8 @@ export const AboutFlexDiv = styled.div`
     display: flex;
     gap: 24px;
   }
+
+  @media (min-width: 1440px) {
+    gap: 40px;
+  }
 `;

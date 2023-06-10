@@ -10,6 +10,19 @@ export const ContactDiv = styled.div`
   gap: 15px;
   align-items: center;
   margin-top: 20px;
+
+  @media (min-width: 768px) {
+    width: 318px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 1000px) {
+    width: 438px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 600px;
+  }
 `;
 
 export const IconDiv = styled(CircleDiv)`
@@ -46,6 +59,12 @@ export const IconLinks = styled.img`
   height: 20px;
   filter: invert(91%) sepia(97%) saturate(0%) hue-rotate(54deg) brightness(300%)
     contrast(150%);
+
+  &:hover {
+    filter: invert(58%) sepia(67%) saturate(537%) hue-rotate(95deg)
+      brightness(98%) contrast(92%);
+    transition: 0.5s;
+  }
 `;
 
 export const LinksDiv = styled.div`
@@ -76,6 +95,11 @@ export const StyledInput = styled.input`
 export const InputsDiv = styled(ContactDiv)`
   padding: 10px 30px 30px;
   display: block;
+
+  @media (min-width: 768px) {
+    margin-top: 20px;
+    width: 100%;
+  }
 `;
 
 export const Textar = styled.textarea`
@@ -107,6 +131,11 @@ export const ResultDiv = styled(ContactDiv)`
   justify-content: center;
   flex-direction: column;
   padding: 30px;
+
+  @media (min-width: 768px) {
+    margin-top: 20px;
+    width: 100%;
+  }
 `;
 
 export const ResultP = styled.p`
@@ -122,6 +151,14 @@ export const ResentP = styled(ResultP)`
   font-size: 14px;
   line-height: 18px;
   color: #18d26e;
+
+  @media (min-width: 1000px) {
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `;
 
 export const Check = styled.img`
@@ -129,4 +166,21 @@ export const Check = styled.img`
     brightness(106%) contrast(81%);
   width: 60px;
   height: 60px;
+`;
+
+export const ContactTab = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 20px;
+  }
+`;
+
+export const InputFlex = styled.div`
+  @media (min-width: 1000px) {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+  }
 `;
