@@ -51,6 +51,7 @@ export default function Portfolio() {
                   ? "rgb(24, 210, 110)"
                   : "rgba(255, 255, 255, 0.1)"
               }
+              bgch={item.title == checked ? "" : "rgba(255, 255, 255, 0.2)"}
               onClick={() => {
                 setChecked(item.title);
                 setCategory(item);

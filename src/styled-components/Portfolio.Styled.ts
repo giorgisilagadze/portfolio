@@ -5,6 +5,7 @@ import { CVButt } from "./About.Styled";
 interface Styles {
   bg?: string;
   bgc?: string;
+  bgch?: string;
 }
 
 export const Project = styled(motion.img)`
@@ -112,6 +113,13 @@ export const SingleCategoryDiv = styled.div<Styles>`
   line-height: 18px;
   color: white;
   background-color: ${({ bgc }) => bgc};
+
+  @media (min-width: 1000px) {
+    cursor: pointer;
+    &:hover {
+      background-color: ${({ bgch }) => bgch};
+    }
+  }
 `;
 
 export const VisitGithub = styled(CVButt)`
