@@ -24,6 +24,7 @@ import {
   ResentP,
   ContactTab,
   InputFlex,
+  ContactMain,
 } from "../styled-components/Contact.Styled";
 import data from "../../data.json";
 import { useForm } from "react-hook-form";
@@ -74,56 +75,61 @@ export default function Contact() {
           <hr />
         </TitleDiv>
         <Learn>CONTACT ME</Learn>
-        <ContactTab>
-          {data.contact.map((item, index) => (
-            <ContactDiv key={Math.random()}>
-              <IconDiv>
-                <IconCont src={item.icon} />
-              </IconDiv>
-              <div>
-                <TitleCont>{item.title}</TitleCont>
-                <LinksDiv>
-                  {item.info.map((cont, i) =>
-                    index == 0 ? (
-                      <a
-                        href={item.link[i]}
-                        key={Math.random()}
-                        target="_blank"
-                      >
-                        <IconLinks src={cont} key={Math.random()} />
-                      </a>
-                    ) : (
-                      <InfoCont key={Math.random()}>{cont}</InfoCont>
-                    )
-                  )}
-                </LinksDiv>
-              </div>
-            </ContactDiv>
-          ))}
-        </ContactTab>
-        {sentMessage ? (
-          <ResultDiv>
-            <Check src="./images/check2.png" alt="" />
-            <ResultP>Your message has been sent</ResultP>
-            <ResentP onClick={() => setSentMessage(false)}>
-              Re-sent message
-            </ResentP>
-          </ResultDiv>
-        ) : (
-          <InputsDiv>
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <InputFlex>
-                <StyledInput placeholder="Your Name" {...register("name")} />
-                <StyledInput placeholder="Your Email" {...register("email")} />
-              </InputFlex>
-              <StyledInput placeholder="Subject" {...register("subject")} />
-              <Textar placeholder="Message" {...register("message")} />
-              <ContactButt>
-                <CvText>Send Message</CvText>
-              </ContactButt>
-            </form>
-          </InputsDiv>
-        )}
+        <ContactMain>
+          <ContactTab>
+            {data.contact.map((item, index) => (
+              <ContactDiv key={Math.random()}>
+                <IconDiv>
+                  <IconCont src={item.icon} />
+                </IconDiv>
+                <div>
+                  <TitleCont>{item.title}</TitleCont>
+                  <LinksDiv>
+                    {item.info.map((cont, i) =>
+                      index == 0 ? (
+                        <a
+                          href={item.link[i]}
+                          key={Math.random()}
+                          target="_blank"
+                        >
+                          <IconLinks src={cont} key={Math.random()} />
+                        </a>
+                      ) : (
+                        <InfoCont key={Math.random()}>{cont}</InfoCont>
+                      )
+                    )}
+                  </LinksDiv>
+                </div>
+              </ContactDiv>
+            ))}
+          </ContactTab>
+          {sentMessage ? (
+            <ResultDiv>
+              <Check src="./images/check2.png" alt="" />
+              <ResultP>Your message has been sent</ResultP>
+              <ResentP onClick={() => setSentMessage(false)}>
+                Re-sent message
+              </ResentP>
+            </ResultDiv>
+          ) : (
+            <InputsDiv>
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <InputFlex>
+                  <StyledInput placeholder="Your Name" {...register("name")} />
+                  <StyledInput
+                    placeholder="Your Email"
+                    {...register("email")}
+                  />
+                </InputFlex>
+                <StyledInput placeholder="Subject" {...register("subject")} />
+                <Textar placeholder="Message" {...register("message")} />
+                <ContactButt>
+                  <CvText>Send Message</CvText>
+                </ContactButt>
+              </form>
+            </InputsDiv>
+          )}
+        </ContactMain>
       </StyledAbout>
     </ParentAbout>
   );

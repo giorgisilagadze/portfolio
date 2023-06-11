@@ -30,7 +30,7 @@ export default function Portfolio() {
     projName: string[];
     link: { github: string; live: string }[];
   }>(data.projects[0]);
-  const [checked, setChecked] = useState("all");
+  const [checked, setChecked] = useState("ALL");
 
   return (
     <ParentAbout>
@@ -52,7 +52,7 @@ export default function Portfolio() {
                   ? "rgb(24, 210, 110)"
                   : "rgba(255, 255, 255, 0.1)"
               }
-              bgch={item.title == checked ? "" : "rgba(255, 255, 255, 0.2)"}
+              bgch={item.title == checked ? "" : "rgb(24, 210, 110)"}
               onClick={() => {
                 setChecked(item.title);
                 setCategory(item);

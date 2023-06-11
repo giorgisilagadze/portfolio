@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { CircleDiv } from "./Home.Styled";
 import { CVButton } from "./About.Styled";
+import { StyledAbout } from "./About.Styled";
 
 export const ContactDiv = styled.div`
   padding: 20px;
@@ -12,12 +13,12 @@ export const ContactDiv = styled.div`
   margin-top: 20px;
 
   @media (min-width: 768px) {
-    width: 318px;
+    width: 315px;
     margin-top: 0px;
   }
 
   @media (min-width: 1000px) {
-    width: 438px;
+    width: 407px;
   }
 
   @media (min-width: 1440px) {
@@ -133,6 +134,11 @@ export const ResultDiv = styled(ContactDiv)`
   @media (min-width: 768px) {
     margin-top: 20px;
     width: 100%;
+    height: 466.5px;
+  }
+
+  @media (min-width: 1000px) {
+    height: 406.5px;
   }
 `;
 
@@ -173,6 +179,10 @@ export const ContactTab = styled.div`
     gap: 24px;
     margin-top: 20px;
   }
+
+  @media (min-width: 1440px) {
+    width: 500px;
+  }
 `;
 
 export const InputFlex = styled.div`
@@ -180,5 +190,14 @@ export const InputFlex = styled.div`
     display: flex;
     width: 100%;
     gap: 20px;
+  }
+`;
+
+export const ContactMain = styled(StyledAbout)`
+  padding: 0px;
+  margin: 0px;
+  @media (min-width: 1440px) {
+    display: flex;
+    gap: 30px;
   }
 `;

@@ -300,7 +300,7 @@ export const CVButton = styled.button`
   margin: 40px auto 0px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 0cqmin;
+  line-height: 24px;
 
   &:hover ${CvText} {
     padding-right: 15px;

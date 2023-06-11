@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { CVButt, CVButton } from "./About.Styled";
+import { CVButt, CVButton, StyledAbout } from "./About.Styled";
 
 interface Styles {
   bg?: string;
@@ -26,6 +26,7 @@ export const ProjectCont = styled(motion.div)<Styles>`
   background-image: url(${({ bg }) => bg});
   background-size: 100% 100%;
   position: relative;
+  object-fit: cover;
 
   @media (min-width: 768px) {
     width: 315px;
@@ -118,6 +119,7 @@ export const SingleCategoryDiv = styled.div<Styles>`
     cursor: pointer;
     &:hover {
       background-color: ${({ bgch }) => bgch};
+      transition: 0.5s;
     }
   }
 `;

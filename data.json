@@ -73,7 +73,7 @@
     ],
     "projects": [
         {
-            "title": "all",
+            "title": "ALL",
             "screens": ["./images/works/space.png", "./images/works/dictionary.png", "./images/works/Todo.png", "./images/works/sign-up-form.png", "./images/works/calculator.png", "./images/works/tic-tac-toe.png", "./images/works/photosnap.png", "./images/works/todoscreen.png", "./images/works/faq.png" ],
             "projName": ["Space-tourism-website", "Dictionary App", "Todo App", "Sign-up-form", "Calculator App", "Tic-Tac-Toe App", "Photosnap Web-App", "Todo App", "FAQ Accordion Card"],
             "link": [
@@ -116,7 +116,7 @@
             ]
         },
         {
-            "title": "react",
+            "title": "REACT",
             "screens": ["./images/works/space.png", "./images/works/dictionary.png", "./images/works/Todo.png", "./images/works/sign-up-form.png", "./images/works/photosnap.png", "./images/works/faq.png"],
             "projName": ["Space-tourism-website", "Dictionary App", "Todo", "Sign-up-form", "Photosnap Web-App", "FAQ Accordion Card"],
             "link": [
