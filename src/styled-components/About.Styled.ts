@@ -204,7 +204,7 @@ export const SingleSkillDiv = styled(motion.div)`
     cursor: pointer;
 
     &:hover {
-      animation: bgcolor 1s;
+      background-color: #18d26e;
     }
   }
 
@@ -220,15 +220,6 @@ export const SkillIcon = styled.img`
 `;
 
 export const CVButt = styled.button`
-  @keyframes bgcolorCv {
-    0% {
-      background-color: #18d26e;
-    }
-    100% {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-  }
-
   width: 170px;
   height: 50px;
   border-radius: 10px;
@@ -247,7 +238,8 @@ export const CVButt = styled.button`
   @media (min-width: 1000px) {
     cursor: pointer;
     &:hover {
-      animation: bgcolorCv 1s;
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: 1s;
     }
   }
 `;
@@ -274,5 +266,49 @@ export const AboutFlexDiv = styled.div`
 
   @media (min-width: 1440px) {
     gap: 40px;
+  }
+`;
+
+export const CvText = styled.span`
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+
+  &::after {
+    content: "»";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+  }
+`;
+
+export const CVButton = styled.button`
+  display: block;
+  border-radius: 4px;
+  background-color: #18d26e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 17px;
+  width: 170px;
+  height: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 40px auto 0px;
+
+  &:hover ${CvText} {
+    padding-right: 15px;
+  }
+
+  &:hover ${CvText}::after {
+    opacity: 1;
+    right: 0;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
   }
 `;

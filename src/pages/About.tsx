@@ -21,6 +21,8 @@ import {
   SkillsParent,
   TabletDiv,
   AboutFlexDiv,
+  CVButton,
+  CvText,
 } from "../styled-components/About.Styled";
 import data from "../../data.json";
 import { useEffect, useRef } from "react";
@@ -86,7 +88,11 @@ export default function About() {
                 <SingleSkillDiv
                   key={Math.random()}
                   initial={
-                    isMobile ? { marginTop: "20px" } : { marginTop: "0px" }
+                    isMobile
+                      ? { marginTop: "20px" }
+                      : {
+                          marginTop: "0px",
+                        }
                   }
                   whileHover={
                     isMobile
@@ -95,7 +101,7 @@ export default function About() {
                           marginTop: "-10px",
                         }
                   }
-                  transition={{ type: "spring", stiffness: 200 }}
+                  transition={{ type: "spring", stiffness: 200, duration: 1 }}
                 >
                   <SkillIcon src={item.src} alt="skill-icon" />
                   <AbTitle>{item.skill}</AbTitle>
@@ -105,10 +111,9 @@ export default function About() {
           </SkillsDiv>
         </SkillsParent>
         <CV href="../../CV.pdf" download>
-          <CVButt>
-            Download CV
-            <Download src="./images/download.png" alt="download" />
-          </CVButt>
+          <CVButton>
+            <CvText>Download CV</CvText>
+          </CVButton>
         </CV>
       </StyledAbout>
     </ParentAbout>

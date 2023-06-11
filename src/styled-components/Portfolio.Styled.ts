@@ -123,14 +123,6 @@ export const SingleCategoryDiv = styled.div<Styles>`
 `;
 
 export const VisitGithub = styled(CVButt)`
-  @keyframes bgcolorGithub {
-    0% {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-    100% {
-      background-color: #18d26e;
-    }
-  }
   font-size: 14px;
   line-height: 18px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -138,7 +130,8 @@ export const VisitGithub = styled(CVButt)`
   @media (min-width: 1000px) {
     cursor: pointer;
     &:hover {
-      animation: bgcolorGithub 1s;
+      background-color: #18d26e;
+      transition: 1s;
     }
   }
 `;
