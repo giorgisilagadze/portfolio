@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { CircleDiv } from "./Home.Styled";
-import { CVButt } from "./About.Styled";
+import { CVButton } from "./About.Styled";
 
 export const ContactDiv = styled.div`
   padding: 20px;
@@ -122,9 +122,7 @@ export const Textar = styled.textarea`
   }
 `;
 
-export const ContactButt = styled(CVButt)`
-  margin-top: 30px;
-`;
+export const ContactButt = styled(CVButton)``;
 
 export const ResultDiv = styled(ContactDiv)`
   height: 300px;

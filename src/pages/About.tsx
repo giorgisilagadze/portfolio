@@ -16,8 +16,6 @@ import {
   SingleSkillDiv,
   SkillIcon,
   CV,
-  CVButt,
-  Download,
   SkillsParent,
   TabletDiv,
   AboutFlexDiv,

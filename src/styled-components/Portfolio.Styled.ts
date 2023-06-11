@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { CVButt } from "./About.Styled";
+import { CVButt, CVButton } from "./About.Styled";
 
 interface Styles {
   bg?: string;
@@ -146,4 +146,8 @@ export const FromTabDiv = styled.div`
     flex-wrap: wrap;
     gap: 26px;
   }
+`;
+
+export const GitButt = styled(CVButton)`
+  width: 210px;
 `;

@@ -4,6 +4,7 @@ import {
   TitleDiv,
   Title,
   Learn,
+  CvText,
 } from "../styled-components/About.Styled";
 import {
   ProjectCont,
@@ -15,9 +16,9 @@ import {
   LinksDiv,
   CategoryDiv,
   SingleCategoryDiv,
-  VisitGithub,
   StyledA,
   FromTabDiv,
+  GitButt,
 } from "../styled-components/Portfolio.Styled";
 import data from "../../data.json";
 import { IconLinks } from "../styled-components/Contact.Styled";
@@ -99,7 +100,9 @@ export default function Portfolio() {
           href="https://github.com/giorgisilagadze?tab=repositories"
           target="_blank"
         >
-          <VisitGithub>SEE MORE ON GITHUB</VisitGithub>
+          <GitButt>
+            <CvText>SEE MORE ON GITHUB</CvText>
+          </GitButt>
         </StyledA>
       </StyledAbout>
     </ParentAbout>

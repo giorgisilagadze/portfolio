@@ -4,6 +4,7 @@ import {
   TitleDiv,
   Title,
   Learn,
+  CvText,
 } from "../styled-components/About.Styled";
 import {
   IconCont,
@@ -117,7 +118,9 @@ export default function Contact() {
               </InputFlex>
               <StyledInput placeholder="Subject" {...register("subject")} />
               <Textar placeholder="Message" {...register("message")} />
-              <ContactButt>Send Message</ContactButt>
+              <ContactButt>
+                <CvText>Send Message</CvText>
+              </ContactButt>
             </form>
           </InputsDiv>
         )}
