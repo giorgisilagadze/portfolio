@@ -103,7 +103,7 @@ export const CategoryDiv = styled(LinksDiv)`
 `;
 
 export const SingleCategoryDiv = styled.div<Styles>`
-  width: 50px;
+  width: 60px;
   height: 30px;
   border-radius: 5px;
   display: flex;
